@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+body{
+    background-color: lavender;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.card{
+    width: 350px;
+    background-color: white;
+    transition: 0.3s;
+    
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+/* top section  */
+.card-top{
+    background-color: blue;
+    height: 130px;
+    
+}
+.like{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: white;
+    color: red;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.like:hover{
+    background-color: red;
+    color: white;
+}
+.status{
+    position: absolute ;
+    top: 15px;
+    right: 15px;
+    background-color: white;
+    color: green;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+.image{
+    position: absolute;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+
+
+}
+.image:hover{
+    border-color: gold;
+
+}
+.card-body{
+    padding: 60px 25px 25px;
+    font-size: 28px;
+}
+.name{
+    color: navy;
+    font-size: 28px;
+}
+
+.role{
+    color: blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin: 5px 0 15px;
+}
+.bio{
+    color: grey;
+    margin-bottom: 20px;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.skills span{
+    background-color: grey;
+    color: navy;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+
+
+}
+.skills span:hover{
+    background-color: blueviolet;
+    color: white;
+}
+.stats{
+    display: flex;
+    justify-content: space-around;
+    background-color: aquamarine;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+
+}
+.stats h3:hover{
+    color: red;
+}

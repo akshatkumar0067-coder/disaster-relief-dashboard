@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 90%;
+            height: 700px;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 2px solid #aaa;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML Table</h1>
+
+    <table>
+        <!-- Row 1 -->
+        <tr>
+            <td colspan="2">Cell 1</td>
+            <td>Cell 2</td>k 
+            <td>Cell 3</td>
+        </tr>
+
+        <!-- Row 2 -->
+        <tr>
+            <td rowspan="3">Cell 4</td>
+            <td>Cell 5</td>
+            <td>Cell 6</td>
+            <td>Cell 7</td>
+        </tr>
+
+        <!-- Row 3 -->
+        <tr>
+            <td colspan="3">Cell 8</td>
+        </tr>
+
+        <!-- Row 4 -->
+        <tr>
+            <td>Cell 9</td>
+            <td colspan="2">Cell 10</td>
+        </tr>
+    </table>
+
+</body>
+</html>

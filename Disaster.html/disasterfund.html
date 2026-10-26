@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Relief Fund & Transparency Dashboard</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="assesment2.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="app-header">
+        <div class="container header-container">
+            <h1 class="logo"><i class="fa-solid fa-hands-holding-circle"></i> ReliefConnect</h1>
+            <nav class="social-sharing">
+                <span>Share:</span>
+                <button class="share-btn" aria-label="Share on Twitter"><i class="fa-brands fa-twitter"></i></button>
+                <button class="share-btn" aria-label="Share on Facebook"><i class="fa-brands fa-facebook"></i></button>
+                <button class="share-btn" aria-label="Copy Link"><i class="fa-solid fa-link"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container main-layout">
+        
+        <!-- Left Column: Campaign & Updates -->
+        <section class="left-column">
+            
+            <!-- Live Campaign Banner -->
+            <div class="card campaign-banner">
+                <div class="emergency-badge">
+                    <i class="fa-solid fa-triangle-exclamation pulse-animation"></i> LIVE EMERGENCY
+                </div>
+                <h2 class="campaign-title">Global Earthquake Relief Fund</h2>
+                <p class="campaign-description">Immediate assistance is required to provide shelter, food, and medical supplies to families affected by the recent catastrophic earthquake. Every contribution makes a direct impact.</p>
+                
+                <!-- Progress Bar Area -->
+                <div class="progress-section">
+                    <div class="progress-stats">
+                        <span class="raised-amount" id="raised-amount">$85,000 Raised</span>
+                        <span class="goal-amount">Goal: $100,000</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" id="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <!-- Impact Metrics -->
+                <div class="impact-metrics">
+                    <div class="metric"><i class="fa-solid fa-people-roof"></i> <span>5,000+ Sheltered</span></div>
+                    <div class="metric"><i class="fa-solid fa-bowl-food"></i> <span>20k Meals Served</span></div>
+                </div>
+            </div>
+
+            <!-- Live Updates Timeline -->
+            <div class="card updates-section">
+                <h3><i class="fa-solid fa-clock-rotate-left"></i> Live Updates</h3>
+                <ul class="timeline">
+                    <li class="timeline-item">
+                        <span class="timeline-time">2 hours ago</span>
+                        <p class="timeline-content">Medical kits have arrived at the base camp. Distribution starting immediately.</p>
+                    </li>
+                    <li class="timeline-item">
+                        <span class="timeline-time">5 hours ago</span>
+                        <p class="timeline-content">Additional water filtration systems secured. Thank you to our recent donors!</p>
+                    </li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <!-- Right Column: Donation & Transparency -->
+        <section class="right-column">
+            
+            <!-- Donation Form -->
+            <div class="card donation-card">
+                <h3>Make a Donation</h3>
+                <p class="donation-subtitle">Select an amount to contribute to the relief fund.</p>
+                
+                <form id="donation-form" class="donation-form">
+                    <div class="preset-amounts">
+                        <button type="button" class="preset-btn" data-amount="25">$25</button>
+                        <button type="button" class="preset-btn" data-amount="50">$50</button>
+                        <button type="button" class="preset-btn" data-amount="100">$100</button>
+                    </div>
+                    
+                    <div class="custom-amount-wrapper">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="custom-amount" class="custom-amount-input" placeholder="Custom Amount" min="1">
+                    </div>
+                    
+                    <button type="submit" class="submit-donation-btn">Donate Now</button>
+                </form>
+
+                <!-- Recent Donors -->
+                <div class="recent-donors">
+                    <h4>Recent Supporters</h4>
+                    <div class="donor-list">
+                        <span class="donor-badge">Sarah M. donated $50</span>
+                        <span class="donor-badge">John D. donated $100</span>
+                        <span class="donor-badge">Anonymous donated $25</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Transparency Ledger -->
+            <div class="card ledger-card">
+                <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Transparency Ledger</h3>
+                <p class="ledger-subtitle">See exactly where the $85,000 raised is being allocated.</p>
+                
+                <div class="table-responsive">
+                    <table class="ledger-table">
+                        <thead>
+                            <tr>
+                                <th>Procurement Item</th>
+                                <th>Allocation</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa-solid fa-mattress-pillow"></i> Thermal Blankets</td>
+                                <td>$20,000</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-faucet-drip"></i> Water Filtration Kits</td>
+                                <td>$25,000</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-box-open"></i> Dry Ration Packs</td>
+                                <td>$15,000</td>
+                                <td><span class="status-badge transit">In Transit</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-suitcase-medical"></i> Medical Kits</td>
+                                <td>$25,000</td>
+                                <td><span class="status-badge transit">In Transit</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Success Modal (Hidden by default) -->
+    <div id="success-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <i class="fa-solid fa-circle-check modal-icon"></i>
+            <h2>Thank You!</h2>
+            <p>Your donation of <strong id="modal-amount"></strong> has been successfully processed.</p>
+            <button id="close-modal-btn" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="assesment2.js"></script>
+</body>
+</html>

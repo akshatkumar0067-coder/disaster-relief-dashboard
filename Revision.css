@@ -1,0 +1,76 @@
+.hello{
+    color:brown
+}
+
+/* selectors */
+/* universal selector */
+*{
+    background-color: bisque;
+    margin: 1;
+}
+
+/* element selector */
+h1{
+    color: darkblue;
+}
+
+h4{
+    color: darkgreen;
+}
+
+/* ID selector */
+#Akshat{
+    color: darkred;
+}
+
+
+/*group selector */
+p,h2,h3{
+    color: darkgoldenrod;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: bisque;
+
+
+/*pesudo class selector */
+a:hover{
+    
+    background-color: red
+    color:blue
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*attribute selector */
+input[type="text"]{
+    border: 3px solid red;
+}
+
+
+/*descendant selector */
+
+div p{
+    color: darkblue;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+}
+
+.btn:hover{
+    background-color: red;
+    color: blue;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*pseudo element selector */
+p:before{
+    content: read article;
+    color: darkblue;
+    font-size: 20px;
+}
+
+
+
+
+

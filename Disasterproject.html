@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Disaster Relief Fund</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7f9;
+      color: #211818;
+    }
+
+    /* Emergency Banner */
+    .emergency-banner {
+      background: linear-gradient(135deg, #b91c1c, #ef4444);
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Main Container */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 35px auto;
+    }
+
+    /* Campaign Card */
+    .campaign-card {
+      background: white;
+      border-radius: 18px;
+      padding: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .campaign-tag {
+      display: inline-block;
+      background: #fee2e2;
+      color: #353154;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .description {
+      color: #6b7280;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 800px;
+    }
+
+    /* Fundraising Stats */
+    .fund-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .raised {
+      color: #16a34a;
+      font-size: 22px;
+    }
+
+    .target {
+      color: #6b7280;
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      width: 100%;
+      height: 18px;
+      background: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      width: 85%;
+      height: 100%;
+      background: linear-gradient(90deg, #16a34a, #22c55e);
+      border-radius: 20px;
+      transition: width 0.5s ease;
+    }
+
+    .progress-text {
+      text-align: right;
+      color: #16a34a;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    /* Donation Section */
+    .donation-section {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 25px;
+    }
+
+    .donation-section h2 {
+      margin-bottom: 18px;
+    }
+
+    .amount-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .amount-btn {
+      padding: 13px 25px;
+      border: 2px solid #16a34a;
+      background: white;
+      color: #15803d;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.2s;
+    }
+
+    .amount-btn:hover,
+    .amount-btn.active {
+      background: #16a34a;
+      color: white;
+    }
+
+    .custom-input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-bottom: 18px;
+      outline: none;
+    }
+
+    .custom-input:focus {
+      border-color: #16a34a;
+    }
+
+    .donate-btn {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #16a34a;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .donate-btn:hover {
+      background: #15803d;
+    }
+
+    .message {
+      display: none;
+      margin-top: 15px;
+      padding: 12px;
+      background: #dcfce7;
+      color: #166534;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        width: 94%;
+        margin: 20px auto;
+      }
+
+      .campaign-card {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .fund-stats {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .amount-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .amount-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Emergency Banner -->
+  <div class="emergency-banner">
+    🚨 EMERGENCY RELIEF APPEAL — Your support can help families recover.
+  </div>
+
+  <main class="container">
+
+    <!-- Campaign -->
+    <section class="campaign-card">
+
+      <span class="campaign-tag">🔴 ACTIVE EMERGENCY CAMPAIGN</span>
+
+      <h1>Flood Relief & Recovery Campaign</h1>
+
+      <p class="description">
+        Severe flooding has affected local communities. Funds are urgently
+        needed for clean water, food, emergency shelter and medical supplies.
+        Every contribution helps provide immediate disaster relief.
+      </p>
+
+      <!-- Fundraising Stats -->
+      <div class="fund-stats">
+        <span class="raised" id="raisedAmount">$85,000 Raised</span>
+        <span class="target">Goal: $100,000</span>
+      </div>
+
+      <!-- Progress -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="progress-text" id="progressText">
+        85% Funded
+      </div>
+
+      <!-- Donation -->
+      <div class="donation-section">
+
+        <h2>💙 Make an Instant Donation</h2>
+
+        <div class="amount-buttons">
+          <button class="amount-btn" onclick="selectAmount(25, this)">
+            $25
+          </button>
+
+          <button class="amount-btn" onclick="selectAmount(50, this)">
+            $50
+          </button>
+
+          <button class="amount-btn" onclick="selectAmount(100, this)">
+            $100
+          </button>
+
+          <button class="amount-btn" onclick="selectCustom(this)">
+            Custom
+          </button>
+        </div>
+
+        <input
+          type="number"
+          id="customAmount"
+          class="custom-input"
+          placeholder="Enter custom amount ($)"
+          min="1"
+        >
+
+        <button class="donate-btn" onclick="donate()">
+          Donate Now ❤️
+        </button>
+
+        <div class="message" id="message"></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    let selectedAmount = 0;
+
+    const goal = 100000;
+    let raised = 85000;
+
+    function selectAmount(amount, button) {
+      selectedAmount = amount;
+
+      document.querySelectorAll(".amount-btn")
+        .forEach(btn => btn.classList.remove("active"));
+
+      button.classList.add("active");
+
+      document.getElementById("customAmount").value = amount;
+    }
+
+    function selectCustom(button) {
+      selectedAmount = 0;
+
+      document.querySelectorAll(".amount-btn")
+        .forEach(btn => btn.classList.remove("active"));
+
+      button.classList.add("active");
+
+      document.getElementById("customAmount").focus();
+      document.getElementById("customAmount").value = "";
+    }
+
+    function donate() {
+
+      const customValue =
+        Number(document.getElementById("customAmount").value);
+
+      if (customValue > 0) {
+        selectedAmount = customValue;
+      }
+
+      if (selectedAmount <= 0) {
+        alert("Please select or enter a donation amount.");
+        return;
+      }
+
+      if (raised >= goal) {
+        alert("The fundraising goal has already been reached!");
+        return;
+      }
+
+      raised += selectedAmount;
+
+      if (raised > goal) {
+        raised = goal;
+      }
+
+      updateProgress();
+
+      const message = document.getElementById("message");
+
+      message.style.display = "block";
+      message.innerHTML =
+        `Thank you! Your $${selectedAmount.toLocaleString()} donation has been added. ❤️`;
+
+      document.getElementById("customAmount").value = "";
+
+      selectedAmount = 0;
+
+      document.querySelectorAll(".amount-btn")
+        .forEach(btn => btn.classList.remove("active"));
+    }
+
+    function updateProgress() {
+
+      const percentage =
+        Math.min((raised / goal) * 100, 100);
+
+      document.getElementById("raisedAmount").innerText =
+        `$${raised.toLocaleString()} Raised`;
+
+      document.getElementById("progressBar").style.width =
+        percentage + "%";
+
+      document.getElementById("progressText").innerText =
+        Math.round(percentage) + "% Funded";
+    }
+
+    updateProgress();
+  </script>
+
+</body>
+</html>
