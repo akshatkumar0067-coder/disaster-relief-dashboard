@@ -30,7 +30,7 @@ Disaster.html/
 
 1. Clone the repository:
    ```
-   git clone https://github.com/akshatkumar0067-coder/disaster-relief-dashboard.git
+   git clone https://github.com/akshatkumar0067/disaster-relief-dashboard.git
    ```
 2. Open the project folder.
 3. Open `Disaster.html/disasterfund.html` in your browser (or use the VS Code **Live Server** extension).
@@ -41,7 +41,7 @@ This is a team project.
 
 | Name | Role | GitHub |
 |------|------|--------|
-| Akshat Kumar | Team Leader | [@akshatkumar0067-coder](https://github.com/akshatkumar0067-coder) |
+| Akshat Kumar | Team Leader | [@akshatkumar0067](https://github.com/akshatkumar0067) |
 | Sadhwey | Website Designer | [@sadhwey1122020](https://github.com/sadhwey1122020) |
 | Poorva Sharma | Presentation Manager | [@poorvasharma08](https://github.com/poorvasharma08) |
 
